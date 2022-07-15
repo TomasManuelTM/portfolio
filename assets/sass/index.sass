@@ -1,0 +1,189 @@
+@import url("../icon/icons.css")
+
+@font-face 
+    font-family: "Roboto"
+    src: url("../icon/Roboto.ttf")
+
+@font-face 
+    font-family: "montserrat"
+    src: url("../icon/montserrat.ttf")
+
+
+// configuracao padrao
+*
+    margin: 0px
+    padding: 0px
+    list-style: none
+    font-weight: 500
+    word-break: keep-all
+    text-decoration: none
+    box-sizing: border-box
+    font-family: montserrat
+    scroll-behavior: smooth
+
+
+// configuracao padrao
+body
+    overflow-x: hidden	
+	
+
+
+// retirar a linha do scroll
+::scrollbar  
+    width: 0px!important
+*::scrollbar  
+    width: 0px!important
+*::-webkit-scrollbar 
+    width: 0px!important
+*::-moz-scrollbar 
+    width: 0px!important
+*::-ms-scrollbar 
+    width: 0px!important
+*::-moz-osx-scrollbar
+    width: 0px!important
+*::-o-scrollbar
+    width: 0px!important
+
+
+
+// Regras e Funções
+@mixin index($p: 2.5em 3rem, $w: 100%)
+    width: $w
+    padding: $p 
+
+@mixin flex($align: normal, $justify: space-between, $direction: row, $gap: null)
+    display: flex
+    align-items: $align 
+    justify-content: $justify
+    flex-direction: $direction
+    gap: $gap
+
+@mixin grid($column: 2, $gap: 1rem)
+    display: grid
+    grid-template-columns: repeat($column, 1fr)
+    grid-gap: $gap
+
+
+
+    
+// Query
+@mixin desk
+    @media ( max-width:  992px)
+        @content
+@mixin table
+    @media ( max-width:  768px)
+        @content
+@mixin mobile-table
+    @media ( max-width:  600px)
+        @content
+@mixin mobile-desk
+    @media ( max-width:  425px)
+        @content
+@mixin mobile-normal
+    @media ( max-width:  375px)
+        @content
+@mixin mobile-init
+    @media ( max-width:  320px)
+        @content
+
+
+
+
+
+#root
+    width: 100%
+    height: 100vh
+    position: relative
+    background: #151515
+
+    header
+        top: 1rem
+        position: absolute
+        @include flex(center)
+        @include index(1.8rem 3rem 0)
+
+        h1
+            color: #fff
+            font-weight: 900
+            letter-spacing: 1.5px
+        nav
+            display: none
+
+            ul
+                li
+                    display: inline-block
+    .index
+        height: 100vh
+        @include flex(center, center, column)
+
+        // descricao
+        .index-legenda
+            @include flex(center)
+            gap: 1rem
+            padding: 1.5rem
+
+            // responsive
+            @include table
+                gap: 1.5rem
+                text-align: center
+                flex-direction: column
+                justify-content: center
+                padding-bottom: 2rem
+
+            .descricao
+                p
+                    color: #fff
+                    font-size: 1rem
+                    line-height: 0px
+                    letter-spacing: 1.2px
+
+                    @include table
+                        line-height: unset
+
+                    strong
+                        font-weight: 900
+
+                h1
+                    font-size: 6rem
+                    color: #4700fe
+                    font-weight: 900
+                    letter-spacing: 2px
+                    font-family: Roboto
+                    text-transform: uppercase
+
+                    @include table
+                        font-size: min(10vw)
+            .img
+                width: 200px
+                height: 200px
+                padding: .5rem
+                object-fit: cover
+                border-radius: 50%
+                position: relative
+                border: 5px solid #4700fe
+
+                @include table
+                    width: min(180px)
+                    height: min(180px)
+
+        .index-proxima
+            color: #fff
+            cursor: pointer
+            border-radius: 5px
+            padding: .6rem 1rem
+            outline: 2px solid #fff
+
+
+
+footer.footer
+    bottom: .5rem
+    text-align: center
+    position: absolute
+    @include index(1rem)
+
+    p
+        color: #fff
+        font-size: .8rem
+
+
+

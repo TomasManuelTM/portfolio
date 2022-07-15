@@ -1,0 +1,166 @@
+@import url("../icon/icons.css");
+@font-face {
+  font-family: "Roboto";
+  src: url("../icon/Roboto.ttf");
+}
+@font-face {
+  font-family: "montserrat";
+  src: url("../icon/montserrat.ttf");
+}
+* {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+  font-weight: 500;
+  word-break: keep-all;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: montserrat;
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+::scrollbar {
+  width: 0px !important;
+}
+
+*::scrollbar {
+  width: 0px !important;
+}
+
+*::-webkit-scrollbar {
+  width: 0px !important;
+}
+
+*::-moz-scrollbar {
+  width: 0px !important;
+}
+
+*::-ms-scrollbar {
+  width: 0px !important;
+}
+
+*::-moz-osx-scrollbar {
+  width: 0px !important;
+}
+
+*::-o-scrollbar {
+  width: 0px !important;
+}
+
+#root {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background: #151515;
+}
+#root header {
+  top: 1rem;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 100%;
+  padding: 1.8rem 3rem 0;
+}
+#root header h1 {
+  color: #fff;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+}
+#root header nav {
+  display: none;
+}
+#root header nav ul li {
+  display: inline-block;
+}
+#root .index {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+#root .index .index-legenda {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  gap: 1rem;
+  padding: 1.5rem;
+}
+@media (max-width: 768px) {
+  #root .index .index-legenda {
+    gap: 1.5rem;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 2rem;
+  }
+}
+#root .index .index-legenda .descricao p {
+  color: #fff;
+  font-size: 1rem;
+  line-height: 0px;
+  letter-spacing: 1.2px;
+}
+@media (max-width: 768px) {
+  #root .index .index-legenda .descricao p {
+    line-height: unset;
+  }
+}
+#root .index .index-legenda .descricao p strong {
+  font-weight: 900;
+}
+#root .index .index-legenda .descricao h1 {
+  font-size: 6rem;
+  color: #4700fe;
+  font-weight: 900;
+  letter-spacing: 2px;
+  font-family: Roboto;
+  text-transform: uppercase;
+}
+@media (max-width: 768px) {
+  #root .index .index-legenda .descricao h1 {
+    font-size: 10vw;
+  }
+}
+#root .index .index-legenda .img {
+  width: 200px;
+  height: 200px;
+  padding: 0.5rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+  position: relative;
+  border: 5px solid #4700fe;
+}
+@media (max-width: 768px) {
+  #root .index .index-legenda .img {
+    width: 180px;
+    height: 180px;
+  }
+}
+#root .index .index-proxima {
+  color: #fff;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 0.6rem 1rem;
+  outline: 2px solid #fff;
+}
+
+footer.footer {
+  bottom: 0.5rem;
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  padding: 1rem;
+}
+footer.footer p {
+  color: #fff;
+  font-size: 0.8rem;
+}/*# sourceMappingURL=index.css.map */
