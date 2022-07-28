@@ -111,6 +111,7 @@ body
         h1
             color: #fff
             font-weight: 900
+            font-size: 1.3rem
             letter-spacing: 1.5px
         
     .index
@@ -193,10 +194,17 @@ body
         background: var(--back)
         @include flex(center, center, column)
 
+        @include table
+            height: 100%
+
         aside
             width: 80%
             @include flex(center, center)
             gap: 1rem
+
+            @include table
+                width: 100%
+                flex-direction: column
 
             .img
                 width: 250px
@@ -213,12 +221,18 @@ body
             .artigo
                 width: 60%
                 padding: 0 0 0 3rem
+
+                @include table
+                    width: 100%
+                    padding: 0px
                 ._
                     width: 80%
                     display: block
-                    text-align: left
                     text-align: justify
                     padding: 0 0 1rem 0
+
+                    @include table
+                        width: 100%
 
                     h2
                         font-weight: 900
@@ -227,6 +241,9 @@ body
                         color: var(--color)
                         font-family: Roboto
                         letter-spacing: .9px
+
+                        @include table
+                            letter-spacing: .3px
                     p
                         color: #fff
                         font-size: .9rem
@@ -238,11 +255,13 @@ body
                     display: block
                     text-align: end
                     font-size: .8rem
-                    // padding: 0 0 0 3rem
                     line-height: 1.4rem
                     text-align: justify
                     text-align-last: right
                     letter-spacing: 1.2px
+
+                    @include table
+                        width: 90%
 
                     strong
                         font-weight: 900

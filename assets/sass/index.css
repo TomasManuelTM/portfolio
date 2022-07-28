@@ -78,6 +78,7 @@ body {
 #root header.header h1 {
   color: #fff;
   font-weight: 900;
+  font-size: 1.3rem;
   letter-spacing: 1.5px;
 }
 #root .index {
@@ -179,6 +180,11 @@ body {
   justify-content: center;
   flex-direction: column;
 }
+@media (max-width: 768px) {
+  #root .sobre {
+    height: 100%;
+  }
+}
 #root .sobre aside {
   width: 80%;
   display: flex;
@@ -186,6 +192,12 @@ body {
   justify-content: center;
   flex-direction: row;
   gap: 1rem;
+}
+@media (max-width: 768px) {
+  #root .sobre aside {
+    width: 100%;
+    flex-direction: column;
+  }
 }
 #root .sobre aside .img {
   width: 250px;
@@ -204,12 +216,22 @@ body {
   width: 60%;
   padding: 0 0 0 3rem;
 }
+@media (max-width: 768px) {
+  #root .sobre aside .artigo {
+    width: 100%;
+    padding: 0px;
+  }
+}
 #root .sobre aside .artigo ._ {
   width: 80%;
   display: block;
-  text-align: left;
   text-align: justify;
   padding: 0 0 1rem 0;
+}
+@media (max-width: 768px) {
+  #root .sobre aside .artigo ._ {
+    width: 100%;
+  }
 }
 #root .sobre aside .artigo ._ h2 {
   font-weight: 900;
@@ -218,6 +240,11 @@ body {
   color: var(--color);
   font-family: Roboto;
   letter-spacing: 0.9px;
+}
+@media (max-width: 768px) {
+  #root .sobre aside .artigo ._ h2 {
+    letter-spacing: 0.3px;
+  }
 }
 #root .sobre aside .artigo ._ p {
   color: #fff;
@@ -236,6 +263,11 @@ body {
   -moz-text-align-last: right;
        text-align-last: right;
   letter-spacing: 1.2px;
+}
+@media (max-width: 768px) {
+  #root .sobre aside .artigo span {
+    width: 90%;
+  }
 }
 #root .sobre aside .artigo span strong {
   font-weight: 900;
