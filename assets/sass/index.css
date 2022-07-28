@@ -56,7 +56,7 @@ body {
 
 #root {
   width: 100%;
-  height: 100vh;
+  height: 100%;
   position: relative;
   background: var(--back);
 }
@@ -83,7 +83,7 @@ body {
 #root .index {
   top: 0px;
   clear: both;
-  height: 100%;
+  height: 100vh;
   position: relative;
   display: flex;
   align-items: center;
@@ -169,6 +169,9 @@ body {
 #root .sobre {
   clear: both;
   bottom: 0px;
+  height: 100vh;
+  width: 100%;
+  padding: 2.5em 3rem;
   position: relative;
   background: var(--back);
   display: flex;
@@ -176,19 +179,98 @@ body {
   justify-content: center;
   flex-direction: column;
 }
-#root .sobre ul {
-  padding: 3rem;
-  margin: 4rem 0 0;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 2rem;
+#root .sobre aside {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 1rem;
+}
+#root .sobre aside .img {
+  width: 250px;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 25px;
+  box-shadow: -8px 3px 0px 0px var(--color);
+}
+#root .sobre aside .img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#root .sobre aside .artigo {
+  width: 60%;
+  padding: 0 0 0 3rem;
+}
+#root .sobre aside .artigo ._ {
+  width: 80%;
+  display: block;
+  text-align: left;
+  text-align: justify;
+  padding: 0 0 1rem 0;
+}
+#root .sobre aside .artigo ._ h2 {
+  font-weight: 900;
+  padding: 0 0 0.4rem;
+  font-size: 1.4rem;
+  color: var(--color);
+  font-family: Roboto;
+  letter-spacing: 0.9px;
+}
+#root .sobre aside .artigo ._ p {
+  color: #fff;
+  font-size: 0.9rem;
+  line-height: 1.3rem;
+}
+#root .sobre aside .artigo span {
+  width: 80%;
+  float: right;
+  color: #ccc;
+  display: block;
+  text-align: end;
+  font-size: 0.8rem;
+  line-height: 1.4rem;
+  text-align: justify;
+  -moz-text-align-last: right;
+       text-align-last: right;
+  letter-spacing: 1.2px;
+}
+#root .sobre aside .artigo span strong {
+  font-weight: 900;
+  font-family: Roboto;
+}
+#root .conhecimentos {
+  clear: both;
+  bottom: 0px;
+  height: 100vh;
+  width: 100%;
+  padding: 2.5em 3rem;
+  position: relative;
+  background: var(--back);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 @media (max-width: 768px) {
-  #root .sobre ul {
+  #root .conhecimentos {
+    height: 100%;
+  }
+}
+#root .conhecimentos ul {
+  padding: 0rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1.5rem;
+}
+@media (max-width: 768px) {
+  #root .conhecimentos ul {
     grid: none;
   }
 }
-#root .sobre ul li h2 {
+#root .conhecimentos ul li h2 {
   font-weight: 900;
   font-size: 1.5rem;
   font-family: Roboto;
@@ -196,43 +278,53 @@ body {
   letter-spacing: 1.8px;
   text-transform: uppercase;
 }
-#root .sobre ul li h2 span {
+#root .conhecimentos ul li h2 span {
   font-size: 1rem;
   font-family: unset;
 }
-#root .sobre ul li div {
+#root .conhecimentos ul li div {
   padding: 0.5rem 0 0;
 }
-#root .sobre ul li div span {
+#root .conhecimentos ul li div p {
+  color: #d5d1d1;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+#root .conhecimentos ul li div p span {
+  display: block;
+  padding: 0.2rem 0;
+  font-size: 0.8rem;
+}
+#root .conhecimentos ul li div span {
   color: #f5f5f5;
   font-size: 0.9rem;
   display: inline-block;
   margin: 0 0 0.3rem 0rem;
 }
-#root .sobre ul li div span::after {
+#root .conhecimentos ul li div span::after {
   content: "   | ";
   padding: 0 0 0 0.2rem;
 }
-#root .sobre ul li div span:last-child::after, #root .sobre ul li div span.isnone::after {
+#root .conhecimentos ul li div span:last-child::after, #root .conhecimentos ul li div span.isnone::after {
   content: "";
 }
-#root .sobre ul li div span a {
+#root .conhecimentos ul li div span a {
   color: #f5f5f5;
 }
-#root .sobre ul li div span a i {
+#root .conhecimentos ul li div span a i {
   font-size: 0.9rem;
   padding: 0 0.5rem 0 0;
 }
-#root .sobre ul li div h3 {
+#root .conhecimentos ul li div h3 {
   color: #fff;
   font-weight: 900;
   padding: 1rem 0 0.3rem;
   text-transform: uppercase;
 }
-#root .sobre ul li:last-child div span {
+#root .conhecimentos ul li:last-child div span {
   display: block;
 }
-#root .sobre ul li:last-child div span::after {
+#root .conhecimentos ul li:last-child div span::after {
   content: "";
 }
 
@@ -283,7 +375,8 @@ body {
   border-radius: 50%;
 }
 
-footer.footer {
+.footer {
+  z-index: 1;
   clear: both;
   bottom: 0px;
   display: block;
@@ -294,11 +387,11 @@ footer.footer {
   padding: 0.7rem 2rem;
 }
 @media (max-width: 768px) {
-  footer.footer {
+  .footer {
     position: relative !important;
   }
 }
-footer.footer p {
+.footer p {
   color: #fff;
   font-size: 0.8rem;
   line-height: 1.3rem;
