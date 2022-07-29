@@ -338,11 +338,6 @@ body {
   bottom: 0px;
   height: 100% !important;
 }
-#root .projetos h1 {
-  margin: 0 auto;
-  font-weight: 900;
-  color: var(--color);
-}
 #root .projetos ul {
   width: 100%;
   padding: 3rem 0 0;

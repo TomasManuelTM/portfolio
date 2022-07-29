@@ -18,6 +18,8 @@ listLink.forEach(btn =>{
     btn.addEventListener('click', function(e){
         limparList();
         e.preventDefault();
+        var tag = btn.hash.replace("#", "");
+        document.title = (tag == "inicio") ? "Portfólio | Tomas Manuel" : tag.replace(tag.charAt(0), tag.charAt(0).toLocaleUpperCase())+' | Tomas Manuel';
         Js(btn.hash).scrollIntoView();
         btn.classList.add("this");
     });
