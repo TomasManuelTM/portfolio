@@ -82,6 +82,7 @@ body {
   letter-spacing: 1.5px;
 }
 #root .index {
+  height: 100vh !important;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -462,6 +463,9 @@ body {
   justify-content: space-between;
   flex-direction: row;
   gap: 1rem;
+}
+.href-i a.this i {
+  background: #4700fe;
 }
 .href-i a:hover span {
   opacity: 1;

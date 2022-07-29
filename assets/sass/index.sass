@@ -116,6 +116,7 @@ body
         
     .index
         @extend .padrao
+        height: 100vh!important
         @include flex(center, center, column)
 
         // descricao
@@ -429,6 +430,10 @@ body
         position: relative
         @include flex(center, space-between)
         gap: 1rem
+
+        &.this
+            i
+                background: #4700fe
 
         &:hover
             span
