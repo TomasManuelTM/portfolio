@@ -82,10 +82,6 @@ body {
   letter-spacing: 1.5px;
 }
 #root .index {
-  top: 0px;
-  clear: both;
-  height: 100vh;
-  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -169,21 +165,10 @@ body {
 }
 #root .sobre {
   clear: both;
-  bottom: 0px;
-  height: 100vh;
-  width: 100%;
-  padding: 2.5em 3rem;
-  position: relative;
-  background: var(--back);
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-}
-@media (max-width: 768px) {
-  #root .sobre {
-    height: 100%;
-  }
 }
 #root .sobre aside {
   width: 80%;
@@ -275,21 +260,10 @@ body {
 }
 #root .conhecimentos {
   clear: both;
-  bottom: 0px;
-  height: 100vh;
-  width: 100%;
-  padding: 2.5em 3rem;
-  position: relative;
-  background: var(--back);
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-}
-@media (max-width: 768px) {
-  #root .conhecimentos {
-    height: 100%;
-  }
 }
 #root .conhecimentos ul {
   padding: 0rem;
@@ -359,6 +333,84 @@ body {
 #root .conhecimentos ul li:last-child div span::after {
   content: "";
 }
+#root .projetos {
+  bottom: 0px;
+}
+#root .projetos h1 {
+  margin: 0 auto;
+  font-weight: 900;
+  color: var(--color);
+}
+#root .projetos ul {
+  width: 100%;
+  padding: 3rem 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1rem;
+  position: relative;
+}
+#root .projetos ul li {
+  z-index: 0;
+  height: 300px;
+  display: flex;
+  align-items: normal;
+  justify-content: space-between;
+  flex-direction: row;
+  position: relative;
+  padding: 2rem 0 2.5rem 1.5rem;
+}
+#root .projetos ul li::before {
+  top: 0px;
+  left: 0px;
+  width: 70%;
+  content: "";
+  z-index: -1;
+  height: 100%;
+  position: absolute;
+  background: #333;
+  border-radius: 8px;
+}
+#root .projetos ul li .descricao h2 {
+  color: #fff;
+  font-weight: 900;
+  font-family: Roboto;
+}
+#root .projetos ul li .descricao span {
+  color: #fff;
+  font-size: 0.8rem;
+}
+#root .projetos ul li .descricao .btn-link {
+  left: 2rem;
+  bottom: 1rem;
+  display: flex;
+  align-items: normal;
+  justify-content: space-between;
+  flex-direction: row;
+  min-width: 55%;
+  max-width: 59%;
+  position: absolute;
+}
+#root .projetos ul li .descricao .btn-link div a {
+  color: #fff;
+  font-size: 0.8rem;
+  border-radius: 4px;
+  padding: 0.5rem 1.5rem;
+  background: #4200ed;
+}
+#root .projetos ul li .img {
+  width: 100%;
+  padding: 0.5rem;
+  overflow: hidden;
+  background: #ccc;
+  border-radius: 8px;
+}
+#root .projetos ul li .img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: inherit;
+}
 
 .href-i {
   top: 0px;
@@ -405,6 +457,19 @@ body {
   margin: 0.2rem 0;
   background: #fff;
   border-radius: 50%;
+}
+
+.padrao, #root .index, #root .sobre, #root .conhecimentos, #root .projetos {
+  height: 100vh;
+  width: 100%;
+  padding: 2.5em 3rem;
+  position: relative;
+  background: var(--back);
+}
+@media (max-width: 768px) {
+  .padrao, #root .index, #root .sobre, #root .conhecimentos, #root .projetos {
+    height: 100%;
+  }
 }
 
 .footer {
