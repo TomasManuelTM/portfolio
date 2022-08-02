@@ -389,6 +389,16 @@ body
                                 border-radius: 4px
                                 padding: .5rem 1.5rem
                                 background: #4200ed
+                            span
+                                margin: 0 0 .3rem .0rem
+
+                                &::after
+                                    color: #ccc
+                                    content: "   | "
+                                    padding: 0 0 0 .2rem
+                                &:last-child, &.isnone
+                                    &::after
+                                        content: ""
                 .img
                     top: -3rem
                     z-index: 1
